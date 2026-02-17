@@ -1,0 +1,56 @@
+{
+  "name": "rich-discord-link-embeds",
+  "version": "1.0.0",
+  "description": "Markdown in Discord link embeds. Generate Mastodon-compatible status JSON that Discord renders with bold, italic, links, blockquotes, and code formatting.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "discord",
+    "embed",
+    "rich-embed",
+    "link-embed",
+    "link-preview",
+    "mastodon",
+    "activitypub",
+    "markdown",
+    "discord-embed",
+    "discord-markdown",
+    "mastodon-api",
+    "formatted-embed",
+    "rich-text",
+    "social-embed"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/n0/rich-discord-link-embeds.git"
+  },
+  "homepage": "https://github.com/n0/rich-discord-link-embeds#readme",
+  "bugs": {
+    "url": "https://github.com/n0/rich-discord-link-embeds/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}
